@@ -36,31 +36,31 @@ const Hero: React.FC = () => {
       {/* Live Spot Prices Ticker */}
       <div className="absolute top-28 md:top-28 left-0 right-0 z-20">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="glass rounded-2xl p-4 flex items-center justify-center gap-8 md:gap-12 border border-gray-200 shadow-lg">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                <span className="text-yellow-700 font-bold text-sm">AU</span>
+          <div className="glass rounded-2xl p-4 flex items-center justify-center gap-4 md:gap-12 border border-gray-200 shadow-lg">
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                <span className="text-yellow-700 font-bold text-xs md:text-sm">AU</span>
               </div>
               <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider">Gold Spot</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-lg font-bold text-gray-900">${goldPrice.toFixed(2)}</p>
-                  <TrendingUp className="w-4 h-4 text-emerald-600" />
+                <p className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider">Gold Spot</p>
+                <div className="flex items-center gap-1 md:gap-2">
+                  <p className="text-sm md:text-lg font-bold text-gray-900">${goldPrice.toFixed(2)}</p>
+                  <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-emerald-600" />
                 </div>
               </div>
             </div>
             
             <div className="h-8 w-px bg-gray-300"></div>
             
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gray-300/50 flex items-center justify-center">
-                <span className="text-gray-700 font-bold text-sm">AG</span>
+            <div className="flex items-center gap-2 md:gap-3">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-300/50 flex items-center justify-center">
+                <span className="text-gray-700 font-bold text-xs md:text-sm">AG</span>
               </div>
               <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider">Silver Spot</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-lg font-bold text-gray-900">${silverPrice.toFixed(2)}</p>
-                  <TrendingUp className="w-4 h-4 text-emerald-600" />
+                <p className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider">Silver Spot</p>
+                <div className="flex items-center gap-1 md:gap-2">
+                  <p className="text-sm md:text-lg font-bold text-gray-900">${silverPrice.toFixed(2)}</p>
+                  <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-emerald-600" />
                 </div>
               </div>
             </div>
