@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
           <span className="gold-gradient">Zimbabwean Wealth</span>
         </h1>
 
-        <p className="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+        <p className="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-semibold">
           Transcontinental Gems International: Your premier partner in gold trading, diamond exports, and elite custom jewelry from the heart of Southern Africa.
         </p>
 
