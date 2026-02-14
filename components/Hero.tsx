@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation({ threshold: 0.3 });
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center pt-32 md:pt-20 overflow-hidden">
       {/* Background Media Placeholder/Visual */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white z-10"></div>
