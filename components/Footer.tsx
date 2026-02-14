@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             <img 
               src="https://ik.imagekit.io/ojfedrprt/engineered_by_ruramai.png" 
               alt="Engineered by Ruramai" 
-              className="h-16 opacity-70 hover:opacity-100 transition-opacity"
+              className="h-10 opacity-70 hover:opacity-100 transition-opacity"
             />
           </div>
         </div>

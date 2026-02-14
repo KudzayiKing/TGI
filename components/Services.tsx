@@ -9,17 +9,18 @@ const ServiceCard = ({ title, description, icon: Icon, gradient, img, delay }: a
   return (
     <div 
       ref={ref}
-      className={`group relative overflow-hidden rounded-[2.5rem] glass p-1 transition-all hover:scale-[1.02] flex flex-col min-h-[420px] opacity-0 ${isVisible ? 'animate-fade-in-up' : ''} ${delay}`}
+      className={`group relative overflow-hidden rounded-[2.5rem] p-1 transition-all hover:scale-[1.02] flex flex-col min-h-[420px] opacity-0 border border-gray-200 ${isVisible ? 'animate-fade-in-up' : ''} ${delay}`}
     >
-      <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+      <div className="absolute inset-0 opacity-100 group-hover:opacity-90 transition-opacity duration-500">
         <img src={img} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div className="relative p-10 h-full flex flex-col z-10">
-        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${gradient} bg-opacity-10 border border-gray-200`}>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      <div className="relative p-10 h-full flex flex-col justify-end z-10">
+        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${gradient} bg-opacity-90 border border-white/20 shadow-lg`}>
           <Icon className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-2xl font-bold mb-4 font-space text-gray-900">{title}</h3>
-        <p className="text-gray-600 leading-relaxed font-light">{description}</p>
+        <h3 className="text-2xl font-bold mb-4 font-space text-white">{title}</h3>
+        <p className="text-gray-200 leading-relaxed font-light">{description}</p>
       </div>
     </div>
   );
