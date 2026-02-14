@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
             <Globe className="w-8 h-8 text-yellow-600 group-hover:scale-110 transition-transform duration-300" />
             <div className="absolute inset-0 bg-yellow-500 blur-lg opacity-20 group-hover:opacity-40"></div>
           </div>
-          <span className="text-2xl font-black tracking-tight font-sans text-gray-900">
+          <span className="text-2xl font-black tracking-tight font-sans text-yellow-600">
             TGI
           </span>
         </a>
@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm font-medium text-yellow-600 hover:text-yellow-700 transition-colors"
             >
               {link.name}
             </a>
@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-gray-900"
+          className="md:hidden text-yellow-600"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-medium text-gray-700 hover:text-gray-900"
+              className="text-lg font-medium text-yellow-600 hover:text-yellow-700"
             >
               {link.name}
             </a>
