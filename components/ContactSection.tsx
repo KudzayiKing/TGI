@@ -1,12 +1,16 @@
 
 import React from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ContactSection: React.FC = () => {
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({ threshold: 0.2 });
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-        <div>
+        <div ref={leftRef} className={`opacity-0 ${leftVisible ? 'animate-fade-in-left' : ''}`}>
           <h2 className="text-4xl md:text-6xl font-bold font-space mb-8">Secure Your <span className="gold-gradient">Legacy</span></h2>
           <p className="text-gray-400 mb-12 text-lg">
             Ready to partner with Zimbabwe's mineral elite? Whether you're an investor, a jeweler, or a trading house, let's start a conversation.
@@ -46,7 +50,7 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="glass p-10 rounded-[3rem] border border-white/10 relative overflow-hidden">
+        <div ref={rightRef} className={`glass p-10 rounded-[3rem] border border-white/10 relative overflow-hidden opacity-0 ${rightVisible ? 'animate-fade-in-right' : ''}`}>
           <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-[60px]"></div>
           <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

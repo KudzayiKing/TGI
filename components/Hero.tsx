@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { ChevronRight, Play } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Hero: React.FC = () => {
+  const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation({ threshold: 0.3 });
+
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Media Placeholder/Visual */}
@@ -44,14 +47,14 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Floating Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-24">
+        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-24">
           {[
-            { label: 'Mining Claims', value: '200+ Ha' },
-            { label: 'Gold Purity', value: '24 Karat' },
-            { label: 'Global Partners', value: '50+' },
-            { label: 'Experience', value: '15+ Yrs' }
+            { label: 'Mining Claims', value: '200+ Ha', delay: 'stagger-1' },
+            { label: 'Gold Purity', value: '24 Karat', delay: 'stagger-2' },
+            { label: 'Global Partners', value: '50+', delay: 'stagger-3' },
+            { label: 'Experience', value: '15+ Yrs', delay: 'stagger-4' }
           ].map((stat, i) => (
-            <div key={i} className="glass p-6 rounded-3xl group hover:border-yellow-500/50 transition-all">
+            <div key={i} className={`glass p-6 rounded-3xl group hover:border-yellow-500/50 transition-all opacity-0 ${statsVisible ? `animate-scale-in ${stat.delay}` : ''}`}>
               <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">{stat.label}</p>
               <p className="text-2xl font-bold font-space text-white">{stat.value}</p>
             </div>
