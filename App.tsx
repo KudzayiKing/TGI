@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import MiningSection from './components/MiningSection';
-import InvestmentAssistant from './components/InvestmentAssistant';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -50,34 +49,6 @@ const App: React.FC = () => {
 
         <section id="mining" className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-transparent via-gray-50 to-transparent scroll-mt-20">
           <MiningSection />
-        </section>
-
-        <section id="investment" className="py-24 px-6 md:px-12 lg:px-24 scroll-mt-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="w-full md:w-1/2 space-y-6 opacity-0 animate-fade-in-left">
-                <h2 className="text-4xl md:text-5xl font-bold font-space leading-tight">
-                  TGI Digital <span className="gold-gradient">Concierge</span>
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Experience the future of mineral investment. Our AI-powered assistant provides instant insights into the Zimbabwean gold belts, market trends, and joint venture opportunities with Transcontinental Gems International.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="glass p-4 rounded-2xl flex items-center gap-3 opacity-0 animate-scale-in stagger-1">
-                    <ShieldCheck className="text-yellow-500" />
-                    <span className="text-sm font-medium">Licensed & Secure</span>
-                  </div>
-                  <div className="glass p-4 rounded-2xl flex items-center gap-3 opacity-0 animate-scale-in stagger-2">
-                    <TrendingUp className="text-emerald-500" />
-                    <span className="text-sm font-medium">Market Analytics</span>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 opacity-0 animate-fade-in-right">
-                <InvestmentAssistant />
-              </div>
-            </div>
-          </div>
         </section>
 
         <section id="contact" className="py-24 px-6 md:px-12 lg:px-24 scroll-mt-20">

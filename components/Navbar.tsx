@@ -13,7 +13,6 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Mining', href: '#mining' },
-    { name: 'Invest', href: '#investment' },
     { name: 'Contact', href: '#contact' },
   ];
 
