@@ -89,11 +89,11 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button className="px-8 py-4 bg-yellow-500 text-white font-bold rounded-2xl flex items-center gap-2 hover:bg-yellow-600 transition-all hover:-translate-y-1 shadow-2xl shadow-yellow-500/20">
+          <button className="w-full sm:w-64 px-8 py-4 bg-yellow-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-yellow-600 transition-all hover:-translate-y-1 shadow-2xl shadow-yellow-500/20">
             Explore Assets
             <ChevronRight className="w-5 h-5" />
           </button>
-          <button className="px-8 py-4 glass text-gray-900 font-bold rounded-2xl flex items-center gap-2 hover:bg-gray-100 transition-all">
+          <button className="w-full sm:w-64 px-8 py-4 glass text-gray-900 font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-100 transition-all">
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
               <Play className="w-4 h-4 fill-gray-900" />
             </div>
