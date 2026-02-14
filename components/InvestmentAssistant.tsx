@@ -61,16 +61,16 @@ Facts:
   };
 
   return (
-    <div className="w-full h-[600px] glass rounded-[2.5rem] border border-white/10 flex flex-col overflow-hidden shadow-2xl relative">
+    <div className="w-full h-[600px] glass rounded-[2.5rem] border border-gray-200 flex flex-col overflow-hidden shadow-2xl relative">
       {/* Header */}
-      <div className="p-6 border-b border-white/10 flex items-center justify-between bg-white/5">
+      <div className="p-6 border-b border-gray-200 flex items-center justify-between bg-gray-50">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/30">
-            <MessageCircle className="w-5 h-5 text-yellow-500" />
+            <MessageCircle className="w-5 h-5 text-yellow-600" />
           </div>
           <div>
-            <h4 className="font-bold text-sm tracking-tight">TGI Assistant</h4>
-            <p className="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">Active • AI Powered</p>
+            <h4 className="font-bold text-sm tracking-tight text-gray-900">TGI Assistant</h4>
+            <p className="text-[10px] text-emerald-600 font-bold uppercase tracking-widest">Active • AI Powered</p>
           </div>
         </div>
       </div>
@@ -80,10 +80,10 @@ Facts:
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-              <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center border ${msg.role === 'user' ? 'bg-white/10 border-white/20' : 'bg-yellow-500/20 border-yellow-500/30'}`}>
-                {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4 text-yellow-500" />}
+              <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center border ${msg.role === 'user' ? 'bg-gray-100 border-gray-300' : 'bg-yellow-500/20 border-yellow-500/30'}`}>
+                {msg.role === 'user' ? <User className="w-4 h-4 text-gray-700" /> : <Bot className="w-4 h-4 text-yellow-600" />}
               </div>
-              <div className={`p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-yellow-500 text-black font-medium' : 'glass border-white/10 text-gray-300'}`}>
+              <div className={`p-4 rounded-2xl text-sm leading-relaxed ${msg.role === 'user' ? 'bg-yellow-500 text-white font-medium' : 'glass border-gray-200 text-gray-700'}`}>
                 {msg.content}
               </div>
             </div>
@@ -93,7 +93,7 @@ Facts:
           <div className="flex justify-start">
             <div className="flex gap-3 items-center">
               <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/30">
-                <Loader2 className="w-4 h-4 text-yellow-500 animate-spin" />
+                <Loader2 className="w-4 h-4 text-yellow-600 animate-spin" />
               </div>
               <span className="text-xs text-gray-500 italic">Analyzing market data...</span>
             </div>
@@ -102,7 +102,7 @@ Facts:
       </div>
 
       {/* Input */}
-      <div className="p-6 border-t border-white/10 bg-white/5">
+      <div className="p-6 border-t border-gray-200 bg-gray-50">
         <div className="relative flex items-center gap-2">
           <input
             type="text"
@@ -110,12 +110,12 @@ Facts:
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Ask about joint ventures or gold purity..."
-            className="flex-1 bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-yellow-500/50 transition-all"
+            className="flex-1 bg-white border border-gray-200 rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-yellow-500 transition-all text-gray-900"
           />
           <button
             onClick={handleSend}
             disabled={loading || !input.trim()}
-            className="p-4 bg-yellow-500 text-black rounded-xl hover:bg-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            className="p-4 bg-yellow-500 text-white rounded-xl hover:bg-yellow-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-md"
           >
             <Send className="w-5 h-5" />
           </button>

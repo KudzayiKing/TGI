@@ -12,15 +12,15 @@
 
 @layer utilities {
   .gold-gradient {
-    @apply bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 bg-clip-text text-transparent;
   }
 
   .emerald-gradient {
-    @apply bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700 bg-clip-text text-transparent;
   }
 
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200 shadow-lg;
   }
 
   .font-space {

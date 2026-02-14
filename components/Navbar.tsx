@@ -18,14 +18,14 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 glass border-b border-white/10' : 'py-8 bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 glass border-b border-gray-200' : 'py-8 bg-white/80 backdrop-blur-sm'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-3 group cursor-pointer">
           <div className="relative">
-            <Globe className="w-8 h-8 text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
+            <Globe className="w-8 h-8 text-yellow-600 group-hover:scale-110 transition-transform duration-300" />
             <div className="absolute inset-0 bg-yellow-500 blur-lg opacity-20 group-hover:opacity-40"></div>
           </div>
-          <span className="text-2xl font-black tracking-tight font-sans">
+          <span className="text-2xl font-black tracking-tight font-sans text-gray-900">
             TGI
           </span>
         </a>
@@ -36,14 +36,14 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-yellow-500 transition-all hover:scale-105 active:scale-95"
+            className="px-6 py-2 bg-yellow-500 text-white text-sm font-bold rounded-full hover:bg-yellow-600 transition-all hover:scale-105 active:scale-95 shadow-md"
           >
             Get in Touch
           </a>
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-gray-900"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
@@ -60,13 +60,13 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#0a0a0a] border-b border-white/10 flex flex-col p-6 gap-6 md:hidden animate-in fade-in slide-in-from-top-4">
+        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-200 flex flex-col p-6 gap-6 md:hidden animate-in fade-in slide-in-from-top-4 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg font-medium text-gray-300 hover:text-white"
+              className="text-lg font-medium text-gray-700 hover:text-gray-900"
             >
               {link.name}
             </a>
@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen, scrolled }) 
           <a
             href="#contact"
             onClick={() => setIsMenuOpen(false)}
-            className="w-full py-4 bg-yellow-500 text-center text-black font-bold rounded-xl"
+            className="w-full py-4 bg-yellow-500 text-center text-white font-bold rounded-xl hover:bg-yellow-600"
           >
             Inquire Now
           </a>

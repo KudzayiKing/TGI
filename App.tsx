@@ -25,12 +25,12 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-yellow-500/30">
+    <div className="min-h-screen bg-white text-gray-900 selection:bg-yellow-500/20">
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-900/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-900/10 blur-[120px] rounded-full"></div>
-        <div className="absolute top-[30%] right-[10%] w-[20%] h-[20%] bg-blue-900/10 blur-[100px] rounded-full"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-400/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-400/5 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[30%] right-[10%] w-[20%] h-[20%] bg-blue-400/5 blur-[100px] rounded-full"></div>
       </div>
 
       <Navbar 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
           <Services />
         </section>
 
-        <section id="mining" className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent scroll-mt-20">
+        <section id="mining" className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-transparent via-gray-50 to-transparent scroll-mt-20">
           <MiningSection />
         </section>
 
@@ -59,7 +59,7 @@ const App: React.FC = () => {
                 <h2 className="text-4xl md:text-5xl font-bold font-space leading-tight">
                   TGI Digital <span className="gold-gradient">Concierge</span>
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Experience the future of mineral investment. Our AI-powered assistant provides instant insights into the Zimbabwean gold belts, market trends, and joint venture opportunities with Transcontinental Gems International.
                 </p>
                 <div className="flex flex-wrap gap-4">
